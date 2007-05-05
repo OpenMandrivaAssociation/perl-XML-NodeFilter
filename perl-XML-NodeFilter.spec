@@ -1,7 +1,7 @@
 %define module	XML-NodeFilter
 %define name	perl-%{module}
 %define version	0.01
-%define	release %mkrel 2
+%define	release %mkrel 3
 
 Name:		%{name}
 Version:	%{version}
@@ -24,6 +24,8 @@ This is a utility class used by XML::LibXML for parsing XML documents in perl.
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
 %make
+
+%check
 make test
 
 %install
