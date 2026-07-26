@@ -1,15 +1,13 @@
 %define upstream_name	 XML-NodeFilter
-%define upstream_version 0.01
-
 Name:		perl-%{upstream_name}
-Version:	%{upstream_version}
-Release:	5
+Version:	0.01
+Release:	6
 
 Summary:	XML::LibXML's utility class
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/XML-NodeFilter
-Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHISH/XML-NodeFilter-%{upstream_version}.tar.gz
+Source0:	https://cpan.metacpan.org/authors/id/P/PH/PHISH/XML-NodeFilter-%{version}.tar.gz
 
 BuildRequires:	make
 BuildRequires:	perl-devel
@@ -19,7 +17,7 @@ BuildArch:	noarch
 This is a utility class used by XML::LibXML for parsing XML documents in perl.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 perl Makefile.PL INSTALLDIRS=vendor
@@ -39,9 +37,7 @@ make test
 %changelog
 * Mon Aug 03 2009 JÃ©rÃ´me Quelin <jquelin@mandriva.org> 0.10.0-1mdv2010.0
 + Revision: 408243
-- rebuild using %%perl_convert_version
-
-* Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.01-6mdv2009.0
+- rebuild using %0.01 Fri Aug 01 2008 Thierry Vignaud <tvignaud@mandriva.com> 0.01-6mdv2009.0
 + Revision: 258855
 - rebuild
 
